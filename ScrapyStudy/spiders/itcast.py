@@ -7,6 +7,7 @@
 import scrapy
 
 from ScrapyStudy.items import ItcastItem
+from public.Log import Log
 
 
 class ItcastSpider(scrapy.Spider):
@@ -16,6 +17,10 @@ class ItcastSpider(scrapy.Spider):
     start_urls = [
         'http://www.itcast.cn/channel/teacher.shtml'
     ]
+
+    def __init__(self):
+        self.log = Log().get_logger()
+        super(ItcastSpider, self).__init__()
 
     """
     解析的方法，每个初始URL完成下载后将被调用，调用时传入从每一个URL传回的Response对象来作为唯一参数，
