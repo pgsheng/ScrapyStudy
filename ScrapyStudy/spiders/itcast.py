@@ -37,7 +37,6 @@ class ItcastSpider(scrapy.Spider):
         # print(context.extract_first())         # 提取网站标题
 
         items = []          # 存放老师信息的集合
-
         for each in response.xpath("//div[@class='li_txt']"):
             # 将我们得到的数据封装到一个 `ItcastItem` 对象
             item = ItcastItem()

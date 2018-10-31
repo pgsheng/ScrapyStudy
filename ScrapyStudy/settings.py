@@ -36,7 +36,7 @@ DOWNLOAD_DELAY = 2  # 下载延迟秒数，限制频繁访问，以防止被封�
 
 # LOG_FILE = "mySpider.log" # 输出log文件
 LOG_LEVEL = "DEBUG"  # logging级别，DEBUG 、INFO、WARNING 、ERROR 、CRITICAL
-LOG_ENABLED = True  # True启用logging，默认,True，False
+LOG_ENABLED = False  # True启用logging，默认,True，False
 LOG_ENCODING = 'utf-8'  # logging使用的编码
 
 FEED_EXPORT_ENCODING = 'utf-8'  # 配置编码
