@@ -27,6 +27,7 @@ class ItcastSpider(scrapy.Spider):
     该方法作用:
     负责解析返回的网页数据(response.body)，提取结构化数据(生成item)，生成需要下一页的URL请求。
     """
+
     def parse(self, response):
         # 1、保存网页数据
         # filename = "teacher.html"
@@ -36,14 +37,15 @@ class ItcastSpider(scrapy.Spider):
         # context = response.xpath('/html/head/title/text()')
         # print(context.extract_first())         # 提取网站标题
 
-        items = []          # 存放老师信息的集合
+        items = []  # 存放老师信息的集合
         for each in response.xpath("//div[@class='li_txt']"):
             # 将我们得到的数据封装到一个 `ItcastItem` 对象
             item = ItcastItem()
             # extract()方法返回的都是unicode字符串
             name = each.xpath("h3/text()").extract()
             grade = each.xpath("h4/text()").extract()
-            info = each.xpath("p/text()").extract()
+            # normalize-space可以去掉数据中空格、换行符等特殊符号
+            info = each.xpath("normalize-space(p/text())").extract()
 
             # xpath返回的是包含一个元素的列表
             item['name'] = name[0].strip()

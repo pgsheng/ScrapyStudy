@@ -1,16 +1,6 @@
-# -*- coding: utf-8 -*-
 """
 项目的设置文件
 """
-# Scrapy settings for ScrapyStudy project
-#
-# For simplicity, this file contains only settings considered important or
-# commonly used. You can find more settings consulting the documentation:
-#
-#     https://doc.scrapy.org/en/latest/topics/settings.html
-#     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-#     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-
 BOT_NAME = 'ScrapyStudy'  # 爬虫项目的名字
 
 SPIDER_MODULES = ['ScrapyStudy.spiders']  # 爬虫的路径
@@ -43,3 +33,13 @@ FEED_EXPORT_ENCODING = 'utf-8'  # 配置编码
 
 ROBOTSTXT_OBEY = False  # True遵守robots.txt的规则。False拒绝遵守Robot协议。
 # Robot协议保存在网站的服务器中，作用是告诉本网站哪些目录下的网页不希望你进行爬取收录
+
+# FEED_EXPORTERS = {
+#     'csv': 'ScrapyStudy.spiders.MyCsvItemExporter.MyCsvItemExporter',  # 指定自定义输出csv格式类
+# }
+#
+# FIELDS_TO_EXPORT = [  # 指定自定csv输出字段及顺序
+#     'name',
+#     'grade',
+#     'info'
+# ]
