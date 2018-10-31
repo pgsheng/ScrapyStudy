@@ -29,7 +29,7 @@ class Scrapystudy1Pipeline(object):
         """输出csv,使用自定义MyCsvItemExporter可指定顺序和分隔符"""
         csv_filename = Config.get_results_path() + 'teachers.csv'
         self.csv_file = open(csv_filename, 'wb')
-        self.csv_exporter = MyCsvItemExporter(self.csv_file, encoding='utf-8')
+        self.csv_exporter = MyCsvItemExporter(self.csv_file, encoding='gbk')
 
     def process_item(self, item, spider):
         # 当爬虫的数据返回时，这个方法被调用。
