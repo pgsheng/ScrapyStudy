@@ -23,14 +23,14 @@ class JdSpider(scrapy.Spider):
             file.write(response.body)
 
         """获取全部分类商品"""
-        # req = []
-        # for sel in response.xpath('/html/body/div[5]/div[2]/a'):
-        #     for i in sel.xpath('@href').extract():
-        #         if 'category' in i:
-        #             url = "http://wap.jd.com" + i
-        #             r = Request(url, callback=self.parse_category)
-        #             req.append(r)
-        # return req
+        req = []
+        for sel in response.xpath('/html/body/div[5]/div[2]/a'):
+            for i in sel.xpath('@href').extract():
+                if 'category' in i:
+                    url = "http://wap.jd.com" + i
+                    r = Request(url, callback=self.parse_category)
+                    req.append(r)
+        return req
 
     def parse_category(self, response):
         """获取分类页"""

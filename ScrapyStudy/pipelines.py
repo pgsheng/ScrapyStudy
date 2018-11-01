@@ -11,7 +11,6 @@
 
 from scrapy.exporters import JsonItemExporter
 
-from ScrapyStudy.items import JDItem, ItcastItem
 from ScrapyStudy.spiders.MyCsvItemExporter import MyCsvItemExporter
 from public import Config
 from public.Log import Log
