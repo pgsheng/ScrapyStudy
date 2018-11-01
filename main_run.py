@@ -8,4 +8,4 @@ cmdline.execute("scrapy crawl itcast".split())  # 执行爬虫命令 不能去�
 # cmdline.execute("scrapy crawl itcast -o results//teachers0.xml".split())
 
 """多个执行"""
-cmdline.execute("scrapy crawlall".split())
+# cmdline.execute("scrapy crawlall".split())

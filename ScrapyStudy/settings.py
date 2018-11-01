@@ -22,6 +22,7 @@ ITEM_PIPELINES = {
 # 并发请求数，最大是32，写成2，代表一次发2个。如果对方没有做反爬虫机制，可很大并发，可以一下返回很多数据。
 # CONCURRENT_REQUESTS = 2
 
+COMMANDS_MODULE = 'ScrapyStudy.commands'  # 构建一个自定义项目命令
 DOWNLOAD_DELAY = 2  # 下载延迟秒数，限制频繁访问，以防止被封号
 
 # LOG_FILE = "mySpider.log" # 输出log文件

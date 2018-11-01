@@ -31,9 +31,9 @@ class ItcastSpider(scrapy.Spider):
 
     def parse(self, response):
         # 1、保存网页数据
-        # filename = Config.get_results_path() + "teacher.html"
-        # with open(filename, 'wb+') as file:  # 只能以二进制方式打开
-        #     file.write(response.body)
+        filename = Config.get_results_path() + "teacher.html"
+        with open(filename, 'wb+') as file:  # 只能以二进制方式打开
+            file.write(response.body)
 
         # context = response.xpath('/html/head/title/text()')
         # print(context.extract_first())         # 提取网站标题
