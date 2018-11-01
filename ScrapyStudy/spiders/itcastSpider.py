@@ -18,6 +18,8 @@ class ItcastSpider(scrapy.Spider):
     start_urls = [
         'http://www.itcast.cn/channel/teacher.shtml'
     ]
+    # 指定自己的pipeline
+    custom_settings = {'ITEM_PIPELINES': {'ScrapyStudy.pipelines.ItcastPipeline': 300, }}
 
     def __init__(self):
         self.log = Log().get_logger()

@@ -18,7 +18,7 @@ class ItcastItem(scrapy.Item):
     info = scrapy.Field()
 
 
-class JdItem(scrapy.Item):
+class JDItem(scrapy.Item):
     title = scrapy.Field()
     price = scrapy.Field()
     comment = scrapy.Field()

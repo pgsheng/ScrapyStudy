@@ -6,10 +6,12 @@ BOT_NAME = 'ScrapyStudy'  # 爬虫项目的名字
 SPIDER_MODULES = ['ScrapyStudy.spiders']  # 爬虫的路径
 NEWSPIDER_MODULE = 'ScrapyStudy.spiders'  # 爬虫的路径
 
-ITEM_PIPELINES = {
-    # 添加自己定义pipeline，300是优先级，有多个pipeline时优先级从低到高100、200、300顺序调用
-    'ScrapyStudy.pipelines.Scrapystudy1Pipeline': 300,
-}
+# ITEM_PIPELINES = {
+#     # 添加自己定义pipeline，300是优先级，有多个pipeline时优先级从低到高100、200、300顺序调用
+#     # 注意：这里定义所有爬虫spiders共有的pipeline，需在pipeline做数据类型判断再做对应数据保存处理
+#     # 其他方案：直接在spiders指定对应 pipeline，就不需要做数据类型判断
+#     'ScrapyStudy.pipelines.ItcastPipeline': 300,
+# }
 
 # DOWNLOADER_MIDDLEWARES = { # 下载中间件，可以自定义
 #     "Sina_spider1.middleware.UserAgentMiddleware": 401,

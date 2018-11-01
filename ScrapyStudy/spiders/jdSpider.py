@@ -3,7 +3,7 @@ import re
 import scrapy
 from scrapy import Request
 
-from ScrapyStudy.items import JdItem
+from ScrapyStudy.items import JDItem
 from public import Config
 
 
@@ -13,6 +13,8 @@ class JdSpider(scrapy.Spider):
     start_urls = [
         "http://wap.jd.com/category/all.html"
     ]
+    # 指定自己的pipeline
+    custom_settings = {'ITEM_PIPELINES': {'ScrapyStudy.pipelines.JDPipeline': 300, }}
 
     def parse(self, response):
         # 1、保存网页数据
@@ -65,7 +67,7 @@ class JdSpider(scrapy.Spider):
         price = response.xpath('/html/body/div[4]/div[4]/font/text()').extract()[0][1:]
         product_id = response.url.split('/')[-1][:-5]
 
-        item = JdItem()
+        item = JDItem()
         item['title'] = title
         item['price'] = price
         item['product_id'] = product_id
