@@ -12,8 +12,8 @@
 from scrapy.exporters import JsonItemExporter
 
 from ScrapyStudy.spiders.MyCsvItemExporter import MyCsvItemExporter
-from public import Config
-from public.Log import Log
+from ScrapyStudy.public import Config
+from ScrapyStudy.public.Log import Log
 
 
 class ItcastPipeline(object):

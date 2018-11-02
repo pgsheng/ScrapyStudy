@@ -4,7 +4,7 @@ import scrapy
 from scrapy import Request
 
 from ScrapyStudy.items import JDItem
-from public import Config
+from ScrapyStudy.public import Config
 
 
 class JdSpider(scrapy.Spider):

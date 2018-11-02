@@ -7,8 +7,8 @@
 import scrapy
 
 from ScrapyStudy.items import ItcastItem
-from public import Config
-from public.Log import Log
+from ScrapyStudy.public import Config
+from ScrapyStudy.public.Log import Log
 
 
 class ItcastSpider(scrapy.Spider):
