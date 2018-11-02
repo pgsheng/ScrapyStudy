@@ -8,12 +8,12 @@
 """
 设计管道存储爬取内容
 """
-
+import pymongo
 from scrapy.exporters import JsonItemExporter
 
-from ScrapyStudy.spiders.MyCsvItemExporter import MyCsvItemExporter
 from ScrapyStudy.public import Config
 from ScrapyStudy.public.Log import Log
+from ScrapyStudy.spiders.MyCsvItemExporter import MyCsvItemExporter
 
 
 class ItcastPipeline(object):
@@ -32,12 +32,19 @@ class ItcastPipeline(object):
         fields = ['name', 'grade', 'info']
         self.csv_exporter = MyCsvItemExporter(fields=fields, file=self.csv_file, encoding='gbk')
 
+        """存储数据库"""
+        client = pymongo.MongoClient(host='localhost', port=27017)
+        db = client['scrapydb']  # 指定数据库
+        self.collection = db['teachers']  # 指定集合
+
     def process_item(self, item, spider):
         # 当爬虫的数据返回时，这个方法被调用。
         # line = json.dumps(dict(item), ensure_ascii=False) + ",\n"
         # self.file.writelines(line)
         self.exporter.export_item(item)
         self.csv_exporter.export_item(item)
+        # result = self.collection.insert_one(dict(item))
+        # self.log.info(result.inserted_id)
         return item
 
     def open_spider(self, spider):
