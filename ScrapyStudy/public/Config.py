@@ -14,7 +14,8 @@ def get_project_path():
     if getattr(sys, 'frozen', None):  # 解决打包文件路径问题
         return './'  # 相对路径 ， os.path.dirname(sys.executable)获取是运行程序的目录
     else:
-        return os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir))  # 绝对路径
+        return os.path.abspath(
+            os.path.join(os.path.dirname(__file__), os.path.pardir, os.path.pardir))  # 绝对路径
 
 
 def get_results_path():
@@ -85,3 +86,7 @@ def get_word_datas_path():
         if not is_exists:
             os.makedirs(word_datas_path)
         return word_datas_path + '/'
+
+
+if __name__ == '__main__':
+    print(get_project_path())
