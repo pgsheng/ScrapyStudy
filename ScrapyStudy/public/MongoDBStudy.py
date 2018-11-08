@@ -64,7 +64,6 @@ class MongoDBStudy(object):
         self.log.info(result.inserted_id)
 
         students = [
-            {"name": "Taobao", "alexa": "100", "url": "https://www.taobao.com"},
             {"name": "QQ", "alexa": "101", "url": "https://www.qq.com"},
             {"name": "Facebook", "alexa": "10", "url": "https://www.facebook.com"},
         ]
