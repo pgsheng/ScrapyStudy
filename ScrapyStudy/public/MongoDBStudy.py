@@ -26,14 +26,14 @@ class MongoDBStudy(object):
             注意: 在 MongoDB 中，如果数据库不存在，数据库只有在内容插入后才会创建! 就是说，数据库创建后要创建集合(数据表)
                 并插入一个文档(记录)，数据库才会真正创建。集合创建同理。
         """
-        self.db = self.client.testdb
+        self.db = self.client.scrapydb
         # self.db = self.client['testdb']  #　两种方式是等价的。
 
         """
         2.2、读取 MongoDB 中的所有数据库，并判断指定的数据库是否存在
         """
         dblist = self.client.list_database_names()
-        if "testdb" in dblist:
+        if "scrapydb" in dblist:
             self.log.info("数据库已存在！")
         else:
             self.log.info("数据库不存在！")
@@ -43,11 +43,11 @@ class MongoDBStudy(object):
             每个数据库又包含了许多集合Collection，也就类似与关系型数据库中的表，下一步需要指定要操作的集合，
         在这里我们指定一个集合名称为students，学生集合。还是和指定数据库类似，指定集合也有两种方式。
         """
-        self.collection = self.db.students
+        self.collection = self.db.teachers
         # self.collection = self.db['students']
 
         collist = self.db.list_collection_names()
-        if "students" in collist:  # 判断 sites 集合是否存在
+        if "teachers" in collist:  # 判断 sites 集合是否存在
             self.log.info("集合已存在！")
         else:
             self.log.info("集合不存在！")
