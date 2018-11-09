@@ -1,5 +1,3 @@
-# !/usr/bin/python3
-# -*- coding: utf-8 -*-
 """
  @Author  : pgsheng
  @Time    : 2018/10/30 15:09
