@@ -37,6 +37,6 @@ class SeleniumMiddleware(object):
         except TimeoutException as e:
             log.info('加载网页超时')
             spider.driver.execute_script('window.stop()')
-        time.sleep(2)
+        time.sleep(5)
         return HtmlResponse(url=spider.driver.current_url, body=spider.driver.page_source,
                             encoding="utf-8", request=request)
