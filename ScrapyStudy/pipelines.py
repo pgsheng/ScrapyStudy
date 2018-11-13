@@ -49,13 +49,13 @@ class ItcastPipeline(object):
 
     def open_spider(self, spider):
         # 可选实现，当spider被开启时，这个方法被调用。
-        self.log.info('open_spider')
+        self.log.info('open_itcast_spider')
 
     def close_spider(self, spider):
         # 可选实现，当spider被关闭时，这个方法被调用,这里没有被调用，原因不详
         self.exporter.finish_exporting()
         self.file.close()
-        self.log.info('close_spider')
+        self.log.info('close_itcast_spider')
 
 
 class JDPipeline(object):
@@ -81,8 +81,12 @@ class JDPipeline(object):
         self.csv_exporter.export_item(item)
         return item
 
+    def open_spider(self, spider):
+        # 可选实现，当spider被开启时，这个方法被调用。
+        self.log.info('open_jd_spider')
+
     def close_spider(self, spider):
         # 可选实现，当spider被关闭时，这个方法被调用,这里没有被调用，原因不详
         self.exporter.finish_exporting()
         self.file.close()
-        self.log.info('close_spider')
+        self.log.info('close_jd_spider')

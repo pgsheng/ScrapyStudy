@@ -2,6 +2,8 @@ from scrapy.commands import ScrapyCommand
 from scrapy.exceptions import UsageError
 from scrapy.utils.conf import arglist_to_dict
 
+from ScrapyStudy.public.Log import Log
+
 """
 自定义scrapy命令的方式来同时运行多个爬虫
 通过修改scrapy的crawl命令来完成同时执行spider的效果
@@ -11,6 +13,7 @@ from scrapy.utils.conf import arglist_to_dict
 
 class Command(ScrapyCommand):
     requires_project = True
+    log = Log().get_logger()
 
     def syntax(self):
         return '[options]'
@@ -37,8 +40,8 @@ class Command(ScrapyCommand):
     def run(self, args, opts):
 
         spider_loader = self.crawler_process.spider_loader
-        for spidername in args or spider_loader.list():
-            print("crawlall spidername:  " + spidername)
-            self.crawler_process.crawl(spidername, **opts.spargs)
+        for spider_name in args or spider_loader.list():
+            self.log.info('准备爬取 %s' % spider_name)
+            self.crawler_process.crawl(spider_name, **opts.spargs)
 
         self.crawler_process.start()
