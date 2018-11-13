@@ -23,3 +23,8 @@ class JDItem(scrapy.Item):
     price = scrapy.Field()
     comment = scrapy.Field()
     product_id = scrapy.Field()
+
+
+class Sina7x24Item(scrapy.Item):
+    time = scrapy.Field()
+    info = scrapy.Field()

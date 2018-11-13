@@ -14,8 +14,8 @@ NEWSPIDER_MODULE = 'ScrapyStudy.spiders'  # 爬虫的路径
 # }
 
 # DOWNLOADER_MIDDLEWARES = { # 下载中间件，可以自定义
-#     "Sina_spider1.middleware.UserAgentMiddleware": 401,
-#     "Sina_spider1.middleware.CookiesMiddleware": 402,
+#     "ScrapyStudy.middlewares.UserAgentMiddleware": 401,
+#    "Sina_spider1.middleware.CookiesMiddleware": 402,
 # }
 
 # 请求头，用来表示请求者的信息，比如会带着客户端的爬虫名称去访问爬虫网站，如果被识别到就会被拒绝，
@@ -38,7 +38,7 @@ ROBOTSTXT_OBEY = False  # True遵守robots.txt的规则。False拒绝遵守Robot
 # Robot协议保存在网站的服务器中，作用是告诉本网站哪些目录下的网页不希望你进行爬取收录
 
 # FEED_EXPORTERS = {
-#     'csv': 'ScrapyStudy.spiders.MyCsvItemExporter.MyCsvItemExporter',  # 指定自定义输出csv格式类
+#     'csv': 'ScrapyStudy.spiders.MyExporter.MyCsvItemExporter',  # 指定自定义输出csv格式类
 # }
 #
 # FIELDS_TO_EXPORT = [  # 指定自定csv输出字段及顺序
