@@ -41,7 +41,7 @@ class Sina7x24Spider(scrapy.Spider):
         print(context.extract_first())  # 提取网站标题
 
         items = []
-        news = response.xpath("//div[@class='li_txt']")
+        news = response.xpath("//div[@class='bd_i bd_i_og  clearfix']")
         print(news)
         print(60 * '-')
         for each in news:
