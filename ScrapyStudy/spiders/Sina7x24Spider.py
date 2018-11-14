@@ -9,16 +9,15 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 
 from ScrapyStudy.items import Sina7x24Item
-from ScrapyStudy.public import Config
 from ScrapyStudy.public.Log import Log
 
 
 class Sina7x24Spider(scrapy.Spider):
     name = "sina7x24"
     allowed_domains = ["finance.sina.com.cn"]
-    # start_urls = [
-    #     'http://finance.sina.com.cn/7x24/'
-    # ]
+    start_urls = [
+        'http://finance.sina.com.cn/7x24/'
+    ]
     custom_settings = {
         'ITEM_PIPELINES': {'ScrapyStudy.pipelines.Sina7x24Pipeline': 300, },
         'DOWNLOADER_MIDDLEWARES': {"ScrapyStudy.middlewares.SeleniumMiddleware": 401, }
@@ -34,19 +33,17 @@ class Sina7x24Spider(scrapy.Spider):
         self.driver.set_page_load_timeout(30)
         super(Sina7x24Spider, self).__init__()
 
-    def start_requests(self):
-        urls = ['http://finance.sina.com.cn/7x24/']
-        for url in urls:
-            yield scrapy.Request(url=url, callback=self.parse)
+    # def start_requests(self):
+    #     urls = 'http://finance.sina.com.cn/7x24/'
+    #     while True:
+    #         yield scrapy.Request(url=urls, callback=self.parse, dont_filter=True)  # dont_filte为True,不去重
+    #         time.sleep(15)
 
     def parse(self, response):
-        filename = Config.get_results_path() + "sina7x24.html"  # 1、保存网页数据
-        with open(filename, 'wb+') as file:  # 只能以二进制方式打开
-            file.write(response.body)
+        # filename = Config.get_results_path() + "sina7x24.html"  # 1、保存网页数据
+        # with open(filename, 'wb+') as file:  # 只能以二进制方式打开
+        #     file.write(response.body)
         print(60*'-')
-
-        context = response.xpath('/html/head/title/text()')
-        print(context.extract_first())  # 提取网站标题
 
         items = []
         news = response.xpath("//div[@class='bd_i bd_i_og  clearfix']")
@@ -64,7 +61,7 @@ class Sina7x24Spider(scrapy.Spider):
             item['info'] = info[0]
 
             items.append(item)
-
+        print('长度：%s' % len(items))
         return items  # 直接返回最后数据
 
     def closed(self, spider):
