@@ -26,5 +26,5 @@ class JDItem(scrapy.Item):
 
 
 class Sina7x24Item(scrapy.Item):
-    time = scrapy.Field()
+    date = scrapy.Field()
     info = scrapy.Field()

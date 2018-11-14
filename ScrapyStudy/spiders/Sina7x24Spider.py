@@ -2,6 +2,8 @@
  @Author  : pgsheng
  @Time    : 2018/10/30 15:09
 """
+import time
+
 import scrapy
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
@@ -42,16 +44,17 @@ class Sina7x24Spider(scrapy.Spider):
 
         items = []
         news = response.xpath("//div[@class='bd_i bd_i_og  clearfix']")
-        print(news)
-        print(60 * '-')
-        for each in news:
+        day = time.strftime("%Y-%m-%d ", time.localtime(time.time()))  # 获取当前时间
+        for each in news[::-1]:
             item = Sina7x24Item()
             # extract()方法返回的都是unicode字符串,normalize-space()可以去掉数据中空格、换行符等特殊符号
-            time = each.xpath("normalize-space(div/p/text())").extract()
+            times = each.xpath("normalize-space(div/p/text())").extract()
             info = each.xpath("normalize-space(div[2]/div/p/text())").extract()
-            print(time)
+            # time = each.css(".bd_i_time_c::text").extract()
+            # info = each.css(".bd_i_txt_c::text").extract()
+            print(times)
             print(info)
-            item['time'] = time[0]
+            item['date'] = day + times[0]
             item['info'] = info[0]
 
             items.append(item)

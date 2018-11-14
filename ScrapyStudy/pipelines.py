@@ -113,8 +113,11 @@ class Sina7x24Pipeline(object):
         # 当爬虫的数据返回时，这个方法被调用。
         if isinstance(item, Sina7x24Item):
             self.exporter.export_item(item)
-            # result = self.collection.insert_one(dict(item))
-            # self.log.info(result.inserted_id)
+
+            myquery = {"date": item['date']}
+            newvalues = {"$set": dict(item)}
+            result = self.collection.update_many(myquery, newvalues,upsert=True)
+            self.log.info('插入数据id：%s' % result.upserted_id)
         return item
 
     def open_spider(self, spider):
