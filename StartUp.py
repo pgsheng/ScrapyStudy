@@ -1,5 +1,10 @@
 from scrapy import cmdline
 
+from ScrapyStudy.public.Log import Log
+
+log = Log().get_logger()
+
+log.info(20*'-' + '开始' + 20*'-')
 """单个执行"""
 cmdline.execute("scrapy crawl sina7x24".split())
 # cmdline.execute("scrapy crawl jd".split()) #执行爬虫命令 不能去掉split()方法

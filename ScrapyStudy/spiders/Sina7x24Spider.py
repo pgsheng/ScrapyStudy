@@ -34,10 +34,17 @@ class Sina7x24Spider(scrapy.Spider):
         self.driver.set_page_load_timeout(30)
         super(Sina7x24Spider, self).__init__()
 
+    # def start_requests(self):
+    #     url = 'http://finance.sina.com.cn/7x24/'
+    #     while True:
+    #         time.sleep(5)
+    #         yield scrapy.Request(url=url, callback=self.parse)
+
     def parse(self, response):
         filename = Config.get_results_path() + "sina7x24.html"  # 1、保存网页数据
         with open(filename, 'wb+') as file:  # 只能以二进制方式打开
             file.write(response.body)
+        print(60*'-')
 
         context = response.xpath('/html/head/title/text()')
         print(context.extract_first())  # 提取网站标题
@@ -62,5 +69,5 @@ class Sina7x24Spider(scrapy.Spider):
         return items  # 直接返回最后数据
 
     def closed(self, spider):
-        self.log.info("spider closed")
+        self.log.info("sina7x24_spider_closed")
         self.driver.close()
