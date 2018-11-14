@@ -32,11 +32,10 @@ class SeleniumMiddleware(object):
         log.info(spider.name)
         # if spider.name == 'sina7x24':
         try:
-            spider.driver.get(request.url)
+            spider.driver.get(request.url)  # 驱动网页，很耗时
             # spider.driver.execute_script('window.scrollTo(0, document.body.scrollHeight)')
         except TimeoutException as e:
             log.info('加载网页超时')
-            spider.driver.execute_script('window.stop()')
         # time.sleep(5)
         return HtmlResponse(url=spider.driver.current_url, body=spider.driver.page_source,
                             encoding="utf-8", request=request)

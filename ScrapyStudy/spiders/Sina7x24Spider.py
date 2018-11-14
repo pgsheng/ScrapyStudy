@@ -16,9 +16,9 @@ from ScrapyStudy.public.Log import Log
 class Sina7x24Spider(scrapy.Spider):
     name = "sina7x24"
     allowed_domains = ["finance.sina.com.cn"]
-    start_urls = [
-        'http://finance.sina.com.cn/7x24/'
-    ]
+    # start_urls = [
+    #     'http://finance.sina.com.cn/7x24/'
+    # ]
     custom_settings = {
         'ITEM_PIPELINES': {'ScrapyStudy.pipelines.Sina7x24Pipeline': 300, },
         'DOWNLOADER_MIDDLEWARES': {"ScrapyStudy.middlewares.SeleniumMiddleware": 401, }
@@ -28,17 +28,16 @@ class Sina7x24Spider(scrapy.Spider):
         self.log = Log().get_logger()
         options = Options()  # 不同浏览器导入Options包路径不一样
         options.add_argument('-headless')  # 无界面配置
-        self.driver = webdriver.Firefox(firefox_options=options)
+        self.driver = webdriver.Firefox(firefox_options=options)  # 这里初始化浏览很耗时
         # self.driver = webdriver.Firefox()
         # self.driver.maximize_window()
         self.driver.set_page_load_timeout(30)
         super(Sina7x24Spider, self).__init__()
 
-    # def start_requests(self):
-    #     url = 'http://finance.sina.com.cn/7x24/'
-    #     while True:
-    #         time.sleep(5)
-    #         yield scrapy.Request(url=url, callback=self.parse)
+    def start_requests(self):
+        urls = ['http://finance.sina.com.cn/7x24/']
+        for url in urls:
+            yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
         filename = Config.get_results_path() + "sina7x24.html"  # 1、保存网页数据
