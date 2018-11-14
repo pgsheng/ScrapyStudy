@@ -50,6 +50,7 @@ class Sina7x24Spider(scrapy.Spider):
             time = each.xpath("normalize-space(div/p/text())").extract()
             info = each.xpath("normalize-space(div[2]/div/p/text())").extract()
             print(time)
+            print(info)
             item['time'] = time[0]
             item['info'] = info[0]
 

@@ -11,7 +11,7 @@
 import pymongo
 from scrapy.exporters import JsonItemExporter
 
-from ScrapyStudy.items import ItcastItem
+from ScrapyStudy.items import ItcastItem, Sina7x24Item
 from ScrapyStudy.public import Config
 from ScrapyStudy.public.Log import Log
 from ScrapyStudy.spiders.MyExporters import MyCsvItemExporter
@@ -111,7 +111,7 @@ class Sina7x24Pipeline(object):
 
     def process_item(self, item, spider):
         # 当爬虫的数据返回时，这个方法被调用。
-        if isinstance(item, ItcastItem):
+        if isinstance(item, Sina7x24Item):
             self.exporter.export_item(item)
             # result = self.collection.insert_one(dict(item))
             # self.log.info(result.inserted_id)
