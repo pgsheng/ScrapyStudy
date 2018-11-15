@@ -117,7 +117,7 @@ class Sina7x24Pipeline(object):
             myquery = {"date": item['date']}
             newvalues = {"$set": dict(item)}
             result = self.collection.update_many(myquery, newvalues,upsert=True)
-            self.log.info('插入数据id：%s' % result.upserted_id)
+            # self.log.info('插入数据id：%s' % result.upserted_id)
         return item
 
     def open_spider(self, spider):

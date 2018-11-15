@@ -15,12 +15,13 @@ from ScrapyStudy.public.Log import Log
 class Sina7x24Spider(scrapy.Spider):
     name = "sina7x24"
     allowed_domains = ["finance.sina.com.cn"]
-    start_urls = [
-        'http://finance.sina.com.cn/7x24/'
-    ]
+    # start_urls = [
+    #     'http://finance.sina.com.cn/7x24/'
+    # ]
     custom_settings = {
         'ITEM_PIPELINES': {'ScrapyStudy.pipelines.Sina7x24Pipeline': 300, },
-        'DOWNLOADER_MIDDLEWARES': {"ScrapyStudy.middlewares.SeleniumMiddleware": 401, }
+        'DOWNLOADER_MIDDLEWARES': {"ScrapyStudy.middlewares.SeleniumMiddleware": 401, },
+        'CONCURRENT_REQUESTS' : 1,
     }
 
     def __init__(self):
@@ -33,11 +34,11 @@ class Sina7x24Spider(scrapy.Spider):
         self.driver.set_page_load_timeout(30)
         super(Sina7x24Spider, self).__init__()
 
-    # def start_requests(self):
-    #     urls = 'http://finance.sina.com.cn/7x24/'
-    #     while True:
-    #         yield scrapy.Request(url=urls, callback=self.parse, dont_filter=True)  # dont_filte为True,不去重
-    #         time.sleep(15)
+    def start_requests(self):
+        urls = 'http://finance.sina.com.cn/7x24/'
+        while True:
+            time.sleep(25)
+            yield scrapy.Request(url=urls, callback=self.parse, dont_filter=True)  # dont_filte为True,不去重
 
     def parse(self, response):
         # filename = Config.get_results_path() + "sina7x24.html"  # 1、保存网页数据

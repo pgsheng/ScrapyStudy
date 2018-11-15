@@ -29,7 +29,7 @@ class SeleniumMiddleware(object):
     """ 抓取js动态生成代码中间件 Selenium"""
 
     def process_request(self, request, spider):
-        log.info(spider.name)
+        # log.info(spider.name)
         # if spider.name == 'sina7x24':
         try:
             spider.driver.get(request.url)  # 驱动网页，很耗时
