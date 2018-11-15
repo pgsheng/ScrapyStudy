@@ -31,20 +31,22 @@ class Sina7x24Spider(scrapy.Spider):
         self.driver = webdriver.Firefox(firefox_options=options)  # 这里初始化浏览很耗时
         # self.driver = webdriver.Firefox()
         # self.driver.maximize_window()
-        self.driver.set_page_load_timeout(30)
+        self.driver.set_page_load_timeout(25)
+        self.date_list = []
+        self.is_first = True
         super(Sina7x24Spider, self).__init__()
 
     def start_requests(self):
         urls = 'http://finance.sina.com.cn/7x24/'
-        while True:
-            time.sleep(25)
+        # while True:
+        for i in range(50):
+            time.sleep(10)
             yield scrapy.Request(url=urls, callback=self.parse, dont_filter=True)  # dont_filte为True,不去重
 
     def parse(self, response):
         # filename = Config.get_results_path() + "sina7x24.html"  # 1、保存网页数据
         # with open(filename, 'wb+') as file:  # 只能以二进制方式打开
         #     file.write(response.body)
-        print(60*'-')
 
         items = []
         news = response.xpath("//div[@class='bd_i bd_i_og  clearfix']")
@@ -56,13 +58,26 @@ class Sina7x24Spider(scrapy.Spider):
             info = each.xpath("normalize-space(div[2]/div/p/text())").extract()
             # time = each.css(".bd_i_time_c::text").extract()
             # info = each.css(".bd_i_txt_c::text").extract()
-            print(times)
-            print(info)
-            item['date'] = day + times[0]
-            item['info'] = info[0]
+
+            date = day + times[0]
+            if self.is_first:
+                item['date'] = date
+                item['info'] = info[0]
+                self.date_list.append(date)
+                print(date + info[0])
+            else:
+                if date in self.date_list:
+                    continue
+                else:
+                    item['date'] = date
+                    item['info'] = info[0]
+                    self.date_list.append(date)
+                    print('-' * 60)
+                    print(date + info[0])
 
             items.append(item)
-        print('长度：%s' % len(items))
+        self.is_first = False
+        # print('长度：%s' % len(items))
         return items  # 直接返回最后数据
 
     def closed(self, spider):
