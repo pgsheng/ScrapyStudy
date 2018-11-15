@@ -22,3 +22,13 @@
 ## 常见异常：
     1、UnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 176: illegal multibyte sequence
        原因1：文件打开出现编码错误 ；原因2.  配置文件中 scrapy.cfg 含有中文字符
+       
+## 安装：
+    pip install PyYAML # 读写yaml格式文件
+    pip install Scrapy # 爬虫框架
+    pip install pymongo # 数据库MongoDB操作
+    pip install selenium # 浏览驱动框架
+    pip install ./Twisted-18.9.0-cp36-cp36m-win_amd64.whl # python语言写的事件驱动的网络框架
+    pip install ./pywin32-224-cp36-cp36m-win_amd64.whl # Python调用win
+    pip install scrapy-splash # JS渲染服务
+    splash服务需要依托docker，安装docker ：http://www.cnblogs.com/shaosks/p/6932319.html
