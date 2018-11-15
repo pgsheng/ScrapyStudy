@@ -2,7 +2,7 @@
  @Author  : pgsheng
  @Time    : 2018/10/31 15:35
 """
-from scrapy.exporters import CsvItemExporter
+from scrapy.exporters import CsvItemExporter, JsonLinesItemExporter
 
 
 class MyCsvItemExporter(CsvItemExporter):
@@ -20,3 +20,24 @@ class MyCsvItemExporter(CsvItemExporter):
             kwargs['fields_to_export'] = fields
 
         super(MyCsvItemExporter, self).__init__(*args, **kwargs)
+
+
+class MyJsonLinesItemExporter(JsonLinesItemExporter):
+    def __init__(self, file, **kwargs):
+        super(MyJsonLinesItemExporter, self).__init__(file, **kwargs)
+        self.first_item = True
+
+    def start_exporting(self):
+        self.file.write(b"[")
+        self.file.write(b'\n')
+
+    def export_item(self, item):
+        if self.first_item:
+            self.first_item = False
+        else:
+            self.file.write(b',')
+        JsonLinesItemExporter.export_item(self, item)
+
+    def finish_exporting(self):
+        self.file.write(b'\n')
+        self.file.write(b"]")

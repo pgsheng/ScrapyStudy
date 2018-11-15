@@ -9,12 +9,12 @@
 设计管道存储爬取内容
 """
 import pymongo
-from scrapy.exporters import JsonItemExporter
+from scrapy.exporters import JsonItemExporter, JsonLinesItemExporter
 
 from ScrapyStudy.items import ItcastItem, Sina7x24Item
 from ScrapyStudy.public import Config
 from ScrapyStudy.public.Log import Log
-from ScrapyStudy.spiders.MyExporters import MyCsvItemExporter
+from ScrapyStudy.spiders.MyExporters import MyCsvItemExporter, MyJsonLinesItemExporter
 
 
 class ItcastPipeline(object):
@@ -102,6 +102,7 @@ class Sina7x24Pipeline(object):
         filename = Config.get_results_path() + 'sina7x24.json'
         self.file = open(filename, 'wb')
         self.exporter = JsonItemExporter(self.file, indent=0, encoding='utf-8')
+        # self.exporter = MyJsonLinesItemExporter(self.file, indent=0, encoding='utf-8')
         self.exporter.start_exporting()
 
         """存储数据库"""
