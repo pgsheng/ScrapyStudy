@@ -30,7 +30,6 @@ class SeleniumMiddleware(object):
 
     def process_request(self, request, spider):
         # log.info(spider.name)
-        # if spider.name == 'sina7x24':
         try:
             spider.driver.get(request.url)  # 驱动网页，很耗时
             # spider.driver.execute_script('window.scrollTo(0, document.body.scrollHeight)')

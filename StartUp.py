@@ -1,5 +1,3 @@
-import os
-import time
 
 from scrapy import cmdline
 
@@ -20,8 +18,3 @@ cmdline.execute("scrapy crawl sina7x24".split())
 # cmdline.execute("scrapy crawlall".split())
 
 
-# if __name__ == '__main__':
-#     while True:
-#         os.system("scrapy crawl sina7x24")
-#         # cmdline.execute("scrapy crawl sina7x24".split())
-#         time.sleep(30)

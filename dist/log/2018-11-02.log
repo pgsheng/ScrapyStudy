@@ -1,0 +1,3 @@
+2018-11-02 16:28:04,324 - pipelines.py - 45 : open_spider
+2018-11-02 16:28:05,384 - pipelines.py - 51 : close_spider
+2018-11-02 16:28:10,693 - pipelines.py - 81 : close_spider

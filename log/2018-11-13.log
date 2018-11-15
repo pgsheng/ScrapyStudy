@@ -1,0 +1,215 @@
+2018-11-13 09:53:26,849 - pipelines.py - 52 : open_spider
+2018-11-13 09:53:28,031 - pipelines.py - 58 : close_spider
+2018-11-13 09:53:34,800 - pipelines.py - 88 : close_spider
+2018-11-13 14:13:03,877 - pipelines.py - 52 : open_spider
+2018-11-13 14:13:04,530 - pipelines.py - 58 : close_spider
+2018-11-13 14:13:10,459 - pipelines.py - 88 : close_spider
+2018-11-13 14:13:51,956 - pipelines.py - 52 : open_spider
+2018-11-13 14:13:53,174 - pipelines.py - 58 : close_spider
+2018-11-13 14:13:59,275 - pipelines.py - 88 : close_spider
+2018-11-13 14:17:59,289 - crawlall.py - 44 : 准备爬取 itcast
+2018-11-13 14:17:59,644 - pipelines.py - 52 : open_itcast_spider
+2018-11-13 14:17:59,646 - crawlall.py - 44 : 准备爬取 jd
+2018-11-13 14:17:59,656 - pipelines.py - 86 : open_jd_spider
+2018-11-13 14:18:00,249 - pipelines.py - 58 : close_itcast_spider
+2018-11-13 14:18:05,168 - pipelines.py - 92 : close_jd_spider
+2018-11-13 14:21:09,223 - crawlall.py - 44 : 准备爬取 itcast
+2018-11-13 14:21:09,558 - pipelines.py - 52 : open_itcast_spider
+2018-11-13 14:21:09,559 - crawlall.py - 44 : 准备爬取 jd
+2018-11-13 14:21:09,569 - pipelines.py - 86 : open_jd_spider
+2018-11-13 14:21:10,057 - pipelines.py - 58 : close_itcast_spider
+2018-11-13 14:21:15,368 - pipelines.py - 92 : close_jd_spider
+2018-11-13 14:32:27,309 - crawlall.py - 44 : 准备爬取 Sina7x24
+2018-11-13 14:32:27,652 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 14:32:27,654 - crawlall.py - 44 : 准备爬取 itcast
+2018-11-13 14:32:27,665 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 14:32:27,666 - crawlall.py - 44 : 准备爬取 jd
+2018-11-13 14:32:27,676 - pipelines.py - 88 : open_jd_spider
+2018-11-13 14:32:27,891 - pipelines.py - 60 : close_itcast_spider
+2018-11-13 14:32:29,075 - pipelines.py - 60 : close_itcast_spider
+2018-11-13 14:32:34,553 - pipelines.py - 94 : close_jd_spider
+2018-11-13 14:33:15,452 - crawlall.py - 44 : 准备爬取 Sina7x24
+2018-11-13 14:33:15,819 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 14:33:15,821 - crawlall.py - 44 : 准备爬取 itcast
+2018-11-13 14:33:15,832 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 14:33:15,834 - crawlall.py - 44 : 准备爬取 jd
+2018-11-13 14:33:15,843 - pipelines.py - 88 : open_jd_spider
+2018-11-13 14:33:16,015 - pipelines.py - 60 : close_itcast_spider
+2018-11-13 14:33:16,455 - pipelines.py - 60 : close_itcast_spider
+2018-11-13 14:33:23,093 - pipelines.py - 94 : close_jd_spider
+2018-11-13 14:36:50,175 - crawlall.py - 44 : 准备爬取 Sina7x24
+2018-11-13 14:36:50,515 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 14:36:50,517 - crawlall.py - 44 : 准备爬取 itcast
+2018-11-13 14:36:50,527 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 14:36:50,528 - crawlall.py - 44 : 准备爬取 jd
+2018-11-13 14:36:50,538 - pipelines.py - 88 : open_jd_spider
+2018-11-13 14:36:50,740 - pipelines.py - 60 : close_itcast_spider
+2018-11-13 14:36:51,128 - pipelines.py - 60 : close_itcast_spider
+2018-11-13 14:36:58,214 - pipelines.py - 94 : close_jd_spider
+2018-11-13 14:37:39,792 - crawlall.py - 44 : 准备爬取 Sina7x24
+2018-11-13 14:37:40,131 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 14:37:40,132 - crawlall.py - 44 : 准备爬取 itcast
+2018-11-13 14:37:40,143 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 14:37:40,145 - crawlall.py - 44 : 准备爬取 jd
+2018-11-13 14:37:40,154 - pipelines.py - 88 : open_jd_spider
+2018-11-13 14:37:40,339 - pipelines.py - 60 : close_itcast_spider
+2018-11-13 14:37:40,719 - pipelines.py - 60 : close_itcast_spider
+2018-11-13 14:37:48,742 - pipelines.py - 94 : close_jd_spider
+2018-11-13 14:42:48,306 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 14:42:48,482 - pipelines.py - 60 : close_itcast_spider
+2018-11-13 14:50:44,956 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 14:50:45,549 - pipelines.py - 60 : close_itcast_spider
+2018-11-13 14:51:36,767 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 14:52:48,647 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 14:52:48,821 - pipelines.py - 60 : close_itcast_spider
+2018-11-13 14:54:52,027 - crawlall.py - 44 : 准备爬取 Sina7x24
+2018-11-13 14:54:52,381 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 14:54:52,383 - crawlall.py - 44 : 准备爬取 itcast
+2018-11-13 14:54:52,397 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 14:54:52,398 - crawlall.py - 44 : 准备爬取 jd
+2018-11-13 14:54:52,408 - pipelines.py - 89 : open_jd_spider
+2018-11-13 14:54:52,592 - pipelines.py - 61 : close_itcast_spider
+2018-11-13 14:54:53,230 - pipelines.py - 61 : close_itcast_spider
+2018-11-13 14:54:59,564 - pipelines.py - 95 : close_jd_spider
+2018-11-13 15:11:25,787 - crawlall.py - 44 : 准备爬取 sina7x24
+2018-11-13 15:11:26,160 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 15:11:26,162 - crawlall.py - 44 : 准备爬取 itcast
+2018-11-13 15:11:26,174 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 15:11:26,176 - crawlall.py - 44 : 准备爬取 jd
+2018-11-13 15:11:26,185 - pipelines.py - 89 : open_jd_spider
+2018-11-13 15:11:26,398 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 15:11:26,736 - pipelines.py - 61 : close_itcast_spider
+2018-11-13 15:11:33,616 - pipelines.py - 95 : close_jd_spider
+2018-11-13 15:12:59,392 - crawlall.py - 44 : 准备爬取 sina7x24
+2018-11-13 15:12:59,759 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 15:12:59,761 - crawlall.py - 44 : 准备爬取 itcast
+2018-11-13 15:12:59,772 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 15:12:59,773 - crawlall.py - 44 : 准备爬取 jd
+2018-11-13 15:12:59,782 - pipelines.py - 89 : open_jd_spider
+2018-11-13 15:12:59,962 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 15:13:00,427 - pipelines.py - 61 : close_itcast_spider
+2018-11-13 15:13:07,726 - pipelines.py - 95 : close_jd_spider
+2018-11-13 15:30:08,132 - crawlall.py - 44 : 准备爬取 sina7x24
+2018-11-13 15:30:08,541 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 15:30:08,542 - crawlall.py - 44 : 准备爬取 itcast
+2018-11-13 15:30:08,554 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 15:30:08,555 - crawlall.py - 44 : 准备爬取 jd
+2018-11-13 15:30:08,565 - pipelines.py - 89 : open_jd_spider
+2018-11-13 15:30:08,773 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 15:30:09,161 - pipelines.py - 61 : close_itcast_spider
+2018-11-13 15:30:16,533 - pipelines.py - 95 : close_jd_spider
+2018-11-13 15:32:15,926 - crawlall.py - 44 : 准备爬取 sina7x24
+2018-11-13 15:32:16,256 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 15:32:16,257 - crawlall.py - 44 : 准备爬取 itcast
+2018-11-13 15:32:16,269 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 15:32:16,271 - crawlall.py - 44 : 准备爬取 jd
+2018-11-13 15:32:16,280 - pipelines.py - 89 : open_jd_spider
+2018-11-13 15:32:16,479 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 15:32:17,481 - pipelines.py - 61 : close_itcast_spider
+2018-11-13 15:32:24,436 - pipelines.py - 95 : close_jd_spider
+2018-11-13 16:17:13,157 - crawlall.py - 44 : 准备爬取 sina7x24
+2018-11-13 16:17:23,191 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 16:17:23,192 - crawlall.py - 44 : 准备爬取 itcast
+2018-11-13 16:17:23,203 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 16:17:23,204 - crawlall.py - 44 : 准备爬取 jd
+2018-11-13 16:17:23,214 - pipelines.py - 89 : open_jd_spider
+2018-11-13 16:17:23,402 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 16:17:23,403 - Sina7x24Spider.py - 54 : spider closed
+2018-11-13 16:17:25,362 - pipelines.py - 61 : close_itcast_spider
+2018-11-13 16:17:31,145 - pipelines.py - 95 : close_jd_spider
+2018-11-13 16:19:12,033 - crawlall.py - 44 : 准备爬取 sina7x24
+2018-11-13 16:19:21,825 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 16:19:21,827 - crawlall.py - 44 : 准备爬取 itcast
+2018-11-13 16:19:21,838 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 16:19:21,840 - crawlall.py - 44 : 准备爬取 jd
+2018-11-13 16:19:21,850 - pipelines.py - 89 : open_jd_spider
+2018-11-13 16:19:21,856 - middlewares.py - 32 : sina7x24
+2018-11-13 16:19:22,069 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 16:19:22,071 - Sina7x24Spider.py - 54 : spider closed
+2018-11-13 16:19:23,947 - pipelines.py - 61 : close_itcast_spider
+2018-11-13 16:19:29,927 - pipelines.py - 95 : close_jd_spider
+2018-11-13 16:20:06,079 - crawlall.py - 44 : 准备爬取 sina7x24
+2018-11-13 16:20:15,908 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 16:20:15,910 - crawlall.py - 44 : 准备爬取 itcast
+2018-11-13 16:20:15,922 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 16:20:15,924 - crawlall.py - 44 : 准备爬取 jd
+2018-11-13 16:20:15,933 - pipelines.py - 89 : open_jd_spider
+2018-11-13 16:20:15,939 - middlewares.py - 32 : sina7x24
+2018-11-13 16:20:19,268 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 16:20:19,269 - Sina7x24Spider.py - 54 : spider closed
+2018-11-13 16:20:21,249 - pipelines.py - 61 : close_itcast_spider
+2018-11-13 16:20:26,665 - pipelines.py - 95 : close_jd_spider
+2018-11-13 16:29:56,901 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 16:30:00,227 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 16:30:00,228 - Sina7x24Spider.py - 51 : spider closed
+2018-11-13 16:46:47,464 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 16:46:50,705 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 16:46:50,706 - Sina7x24Spider.py - 51 : spider closed
+2018-11-13 16:48:33,950 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 16:48:38,555 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 16:48:38,555 - Sina7x24Spider.py - 55 : spider closed
+2018-11-13 16:50:42,926 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 16:50:45,956 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 16:50:45,956 - Sina7x24Spider.py - 55 : spider closed
+2018-11-13 16:55:09,008 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 16:55:12,251 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 16:55:12,252 - Sina7x24Spider.py - 59 : spider closed
+2018-11-13 16:59:12,832 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 16:59:17,031 - pipelines.py - 61 : close_itcast_spider
+2018-11-13 17:00:37,970 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 17:00:37,976 - middlewares.py - 32 : itcast
+2018-11-13 17:00:42,137 - pipelines.py - 61 : close_itcast_spider
+2018-11-13 17:02:30,550 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 17:02:30,556 - middlewares.py - 32 : sina7x24
+2018-11-13 17:02:36,831 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 17:02:36,832 - Sina7x24Spider.py - 59 : spider closed
+2018-11-13 17:03:03,529 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 17:03:03,536 - middlewares.py - 32 : sina7x24
+2018-11-13 17:03:09,728 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 17:03:57,255 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 17:03:57,262 - middlewares.py - 32 : sina7x24
+2018-11-13 17:04:03,699 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 17:04:39,864 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 17:04:39,871 - middlewares.py - 32 : sina7x24
+2018-11-13 17:04:46,044 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 17:07:30,162 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 17:07:30,169 - middlewares.py - 32 : sina7x24
+2018-11-13 17:07:37,596 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 17:08:46,937 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 17:08:46,944 - middlewares.py - 32 : sina7x24
+2018-11-13 17:08:53,276 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 17:09:32,781 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 17:09:32,794 - middlewares.py - 32 : sina7x24
+2018-11-13 17:09:39,006 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 17:18:46,156 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 17:18:46,163 - middlewares.py - 32 : sina7x24
+2018-11-13 17:18:52,514 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 17:18:52,517 - Sina7x24Spider.py - 59 : spider closed
+2018-11-13 17:20:53,808 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 17:20:53,816 - middlewares.py - 32 : sina7x24
+2018-11-13 17:21:00,047 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 17:21:00,048 - Sina7x24Spider.py - 59 : spider closed
+2018-11-13 17:23:35,056 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 17:23:35,063 - middlewares.py - 32 : sina7x24
+2018-11-13 17:23:41,302 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 17:23:41,303 - Sina7x24Spider.py - 59 : spider closed
+2018-11-13 17:26:30,595 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 17:26:30,602 - middlewares.py - 32 : sina7x24
+2018-11-13 17:26:36,724 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 17:26:36,725 - Sina7x24Spider.py - 62 : spider closed
+2018-11-13 17:27:59,723 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 17:27:59,730 - middlewares.py - 32 : sina7x24
+2018-11-13 17:28:05,947 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 17:28:05,948 - Sina7x24Spider.py - 63 : spider closed
+2018-11-13 17:32:44,870 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 17:32:45,522 - pipelines.py - 61 : close_itcast_spider
+2018-11-13 17:32:59,452 - pipelines.py - 54 : open_itcast_spider
+2018-11-13 17:32:59,980 - pipelines.py - 61 : close_itcast_spider
+2018-11-13 17:36:06,709 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 17:36:06,716 - middlewares.py - 32 : sina7x24
+2018-11-13 17:36:13,046 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 17:36:13,048 - Sina7x24Spider.py - 61 : spider closed
+2018-11-13 17:51:54,029 - pipelines.py - 122 : open_sina7x24_spider
+2018-11-13 17:51:54,036 - middlewares.py - 32 : sina7x24
+2018-11-13 17:52:00,222 - pipelines.py - 128 : close_sina7x24_spider
+2018-11-13 17:52:00,222 - Sina7x24Spider.py - 61 : spider closed
