@@ -5,48 +5,51 @@
 import time
 
 import scrapy
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
+from scrapy_splash import SplashRequest
 
 from ScrapyStudy.items import Sina7x24Item
+from ScrapyStudy.public import Config
 from ScrapyStudy.public.Log import Log
 
 
-class Sina7x24Spider(scrapy.Spider):
-    name = "sina7x24"
+class Sina7x24SplashSpider(scrapy.Spider):
+    name = "Sina7x24SplashSpider"
     allowed_domains = ["finance.sina.com.cn"]
     # start_urls = [
     #     'http://finance.sina.com.cn/7x24/'
     # ]
     custom_settings = {
         'ITEM_PIPELINES': {'ScrapyStudy.pipelines.Sina7x24Pipeline': 300, },
-        'DOWNLOADER_MIDDLEWARES': {"ScrapyStudy.middlewares.SeleniumMiddleware": 401, },
-        'CONCURRENT_REQUESTS' : 1,
+        'CONCURRENT_REQUESTS': 1,
+
+        'SPLASH_URL': 'http://localhost:8050', # Splash的服务地址，本地或远程服务地址
+        "DOWNLOADER_MIDDLEWARES": {
+            'scrapy_splash.SplashCookiesMiddleware': 723,
+            'scrapy_splash.SplashMiddleware': 725,
+            'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
+        },
+        'SPIDER_MIDDLEWARES': {'scrapy_splash.SplashDeduplicateArgsMiddleware': 100, },
+        'DUPEFILTER_CLASS': 'scrapy_splash.SplashAwareDupeFilter',  # 去重的类
+        'HTTPCACHE_STORAGE': 'scrapy_splash.SplashAwareFSCacheStorage',  # Cache存储
     }
 
     def __init__(self):
         self.log = Log().get_logger()
-        options = Options()  # 不同浏览器导入Options包路径不一样
-        options.add_argument('-headless')  # 无界面配置
-        self.driver = webdriver.Firefox(firefox_options=options)  # 这里初始化浏览很耗时
-        # self.driver = webdriver.Firefox()
-        # self.driver.maximize_window()
-        self.driver.set_page_load_timeout(25)
         self.date_list = []
         self.is_first = True
-        super(Sina7x24Spider, self).__init__()
+        super(Sina7x24SplashSpider, self).__init__()
 
     def start_requests(self):
         urls = 'http://finance.sina.com.cn/7x24/'
-        # while True:
-        for i in range(50):
-            time.sleep(10)
-            yield scrapy.Request(url=urls, callback=self.parse, dont_filter=True)  # dont_filte为True,不去重
+        # for i in range(50):
+        #     time.sleep(10)
+        #     yield scrapy.Request(url=urls, callback=self.parse, dont_filter=True)  # dont_filte为True,不去重
+        yield SplashRequest(url=urls, callback=self.parse, endpoint='execute')
 
     def parse(self, response):
-        # filename = Config.get_results_path() + "sina7x24.html"  # 1、保存网页数据
-        # with open(filename, 'wb+') as file:  # 只能以二进制方式打开
-        #     file.write(response.body)
+        filename = Config.get_results_path() + "sina7x24.html"  # 1、保存网页数据
+        with open(filename, 'wb+') as file:  # 只能以二进制方式打开
+            file.write(response.body)
 
         items = []
         news = response.xpath("//div[@class='bd_i bd_i_og  clearfix']")
@@ -81,5 +84,4 @@ class Sina7x24Spider(scrapy.Spider):
         return items  # 直接返回最后数据
 
     def closed(self, spider):
-        self.log.info("sina7x24_spider_closed")
-        self.driver.close()
+        self.log.info("Sina7x24SplashSpider_closed")
