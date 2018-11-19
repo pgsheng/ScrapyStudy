@@ -1,10 +1,12 @@
 """中间件，可以添加下载中过程一些配置，需要在设置文件setting中配置还起作用"""
+import random
 import time
 
 from scrapy.http import HtmlResponse
 from selenium.common.exceptions import TimeoutException
 
 from ScrapyStudy.public.Log import Log
+from ScrapyStudy.user_agents import agents
 
 log = Log().get_logger()
 

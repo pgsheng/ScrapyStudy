@@ -48,10 +48,10 @@ ROBOTSTXT_OBEY = False  # True遵守robots.txt的规则。False拒绝遵守Robot
 # ]
 
 
-# SPLASH_URL= 'http://localhost:8050'  # Splash的服务地址，本地或远程服务地址
-# DOWNLOADER_MIDDLEWARES = {'scrapy_splash.SplashCookiesMiddleware': 723,
-#                            'scrapy_splash.SplashMiddleware': 725,
-#                            'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810, }
-# SPIDER_MIDDLEWARES=  {'scrapy_splash.SplashDeduplicateArgsMiddleware': 100, }
-# DUPEFILTER_CLASS='scrapy_splash.SplashAwareDupeFilter'  # 去重的类
-# HTTPCACHE_STORAGE='scrapy_splash.SplashAwareFSCacheStorage'  # Cache存储
+SPLASH_URL= 'http://localhost:8050'  # Splash的服务地址，本地或远程服务地址
+DOWNLOADER_MIDDLEWARES = {'scrapy_splash.SplashCookiesMiddleware': 723,
+                           'scrapy_splash.SplashMiddleware': 725,
+                           'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810, }
+SPIDER_MIDDLEWARES=  {'scrapy_splash.SplashDeduplicateArgsMiddleware': 100, }
+DUPEFILTER_CLASS='scrapy_splash.SplashAwareDupeFilter'  # 去重的类
+HTTPCACHE_STORAGE='scrapy_splash.SplashAwareFSCacheStorage'  # Cache存储

@@ -22,15 +22,15 @@ class Sina7x24SplashSpider(scrapy.Spider):
         'ITEM_PIPELINES': {'ScrapyStudy.pipelines.Sina7x24Pipeline': 300, },
         'CONCURRENT_REQUESTS': 1,
 
-        'SPLASH_URL': 'http://localhost:8050', # Splash的服务地址，本地或远程服务地址
-        "DOWNLOADER_MIDDLEWARES": {
-            'scrapy_splash.SplashCookiesMiddleware': 723,
-            'scrapy_splash.SplashMiddleware': 725,
-            'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
-        },
-        'SPIDER_MIDDLEWARES': {'scrapy_splash.SplashDeduplicateArgsMiddleware': 100, },
-        'DUPEFILTER_CLASS': 'scrapy_splash.SplashAwareDupeFilter',  # 去重的类
-        'HTTPCACHE_STORAGE': 'scrapy_splash.SplashAwareFSCacheStorage',  # Cache存储
+        # 'SPLASH_URL': 'http://localhost:8050', # Splash的服务地址，本地或远程服务地址
+        # "DOWNLOADER_MIDDLEWARES": {
+        #     'scrapy_splash.SplashCookiesMiddleware': 723,
+        #     'scrapy_splash.SplashMiddleware': 725,
+        #     'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
+        # },
+        # 'SPIDER_MIDDLEWARES': {'scrapy_splash.SplashDeduplicateArgsMiddleware': 100, },
+        # 'DUPEFILTER_CLASS': 'scrapy_splash.SplashAwareDupeFilter',  # 去重的类
+        # 'HTTPCACHE_STORAGE': 'scrapy_splash.SplashAwareFSCacheStorage',  # Cache存储
     }
 
     def __init__(self):
