@@ -28,7 +28,7 @@ class Sina7x24SplashSpider(scrapy.Spider):
             'scrapy_splash.SplashMiddleware': 725,
             'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810, },
         'SPIDER_MIDDLEWARES': {'scrapy_splash.SplashDeduplicateArgsMiddleware': 100, },
-        'DUPEFILTER_CLASS': 'scrapy_splash.SplashAwareDupeFilter',  # 去重的类
+        # 'DUPEFILTER_CLASS': 'scrapy_splash.SplashAwareDupeFilter',  # 去重的类
         'HTTPCACHE_STORAGE': 'scrapy_splash.SplashAwareFSCacheStorage',  # Cache存储
     }
 
