@@ -34,5 +34,7 @@
     pip install ./pywin32-224-cp36-cp36m-win_amd64.whl # Python调用win
     pip install scrapy-splash   # JS渲染服务
     splash服务需要依托docker，安装docker ：http://www.cnblogs.com/shaosks/p/6932319.html
-    用docker运行scrapinghub/splash服务：docker run -p 8050:8050 scrapinghub/splash
+    用docker运行scrapinghub/splash服务,拉取镜像——启动服务：
+    docker pull scrapinghub/splash  
+    docker run -p 8050:8050 scrapinghub/splash
     
