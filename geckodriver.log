@@ -11491,3 +11491,84 @@ JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1:
 JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
 JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
 * Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1542695472423	geckodriver	INFO	geckodriver 0.21.0
+1542695472444	geckodriver	INFO	Listening on 127.0.0.1:61103
+1542695475478	mozrunner::runner	INFO	Running command: "C:\\ABasicSoftware\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\pgsheng\\AppData\\Local\\Temp\\rust_mozprofile.zEB9njpQ3kPw"
+*** You are running in headless mode.
+1542695477874	Marionette	INFO	Listening on port 61111
+1542695478218	Marionette	WARN	TLS certificate errors will be ignored for this session
+1542695478251	Marionette	DEBUG	[6442450945] Frame script loaded
+1542695478260	Marionette	DEBUG	[6442450945] Frame script registered
+1542695483412	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1542695483540	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+JavaScript error: http://beacon.sina.com.cn/h.js, line 1: ReferenceError: etag_ngx_str is not defined
+1542695483833	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://finance.sina.com.cn/7x24/
+1542695484400	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://finance.sina.com.cn/7x24/
+JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1542695729601	Marionette	INFO	Stopped listening on port 61111
+[Child 6672, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6672, Chrome_ChildThread] WARNI[Child 12864, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12864, Chrome_ChildThread] WARNING: [Parent 2164, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6632, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 61542698237836	geckodriver	INFO	geckodriver 0.21.0
+1542698237846	geckodriver	INFO	Listening on 127.0.0.1:62643
+1542698240892	mozrunner::runner	INFO	Running command: "C:\\ABasicSoftware\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\pgsheng\\AppData\\Local\\Temp\\rust_mozprofile.KGRAQlJYDHwT"
+*** You are running in headless mode.
+1542698243341	Marionette	INFO	Listening on port 62651
+1542698243715	Marionette	WARN	TLS certificate errors will be ignored for this session
+1542698243749	Marionette	DEBUG	[6442450945] Frame script loaded
+1542698243749	Marionette	DEBUG	[6442450945] Frame script registered
+1542698253880	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1542698253978	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1542698254323	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://finance.sina.com.cn/7x24/
+JavaScript error: http://beacon.sina.com.cn/h.js, line 1: ReferenceError: etag_ngx_str is not defined
+1542698255012	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://finance.sina.com.cn/7x24/
+JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1542698265058	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://finance.sina.com.cn/7x24/
+1542698265151	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://finance.sina.com.cn/7x24/
+1542698265151	Marionette	DEBUG	[6442450945] Received DOM event unload for http://finance.sina.com.cn/7x24/
+1542698265226	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450949
+1542698265226	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450951
+1542698265226	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450952
+1542698265226	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450961
+1542698265227	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450956
+1542698265227	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450960
+1542698265227	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450958
+1542698265227	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450965
+1542698265228	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450968
+1542698265285	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://finance.sina.com.cn/7x24/
+1542698266150	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://finance.sina.com.cn/7x24/
+JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1542698276200	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://finance.sina.com.cn/7x24/
+1542698276272	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://finance.sina.com.cn/7x24/
+1542698276272	Marionette	DEBUG	[6442450945] Received DOM event unload for http://finance.sina.com.cn/7x24/
+1542698276374	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://finance.sina.com.cn/7x24/
+1542698276396	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450972
+1542698276397	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450975
+1542698276397	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450980
+1542698276397	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450978
+1542698276397	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450986
+1542698276397	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450982
+1542698276398	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450989
+1542698276637	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://finance.sina.com.cn/7x24/
+JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://static.bshare.cn/js/libs/fingerprint2.min.js, line 1: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
