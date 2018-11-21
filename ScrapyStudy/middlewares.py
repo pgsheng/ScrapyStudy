@@ -37,6 +37,6 @@ class SeleniumMiddleware(object):
             # spider.driver.execute_script('window.scrollTo(0, document.body.scrollHeight)')
         except TimeoutException as e:
             log.info('加载网页超时')
-        # time.sleep(5)
+        time.sleep(2)
         return HtmlResponse(url=spider.driver.current_url, body=spider.driver.page_source,
                             encoding="utf-8", request=request)

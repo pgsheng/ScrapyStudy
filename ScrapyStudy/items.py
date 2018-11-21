@@ -28,3 +28,7 @@ class JDItem(scrapy.Item):
 class Sina7x24Item(scrapy.Item):
     date = scrapy.Field()
     info = scrapy.Field()
+
+
+class BeautyImageItem(scrapy.Item):
+    image_url = scrapy.Field()
