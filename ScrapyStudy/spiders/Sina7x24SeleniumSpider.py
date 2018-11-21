@@ -38,9 +38,9 @@ class Sina7x24SeleniumSpider(scrapy.Spider):
 
     def start_requests(self):
         urls = 'http://finance.sina.com.cn/7x24/'
-        # while True:
-        for i in range(50):
-            time.sleep(10)
+        while True:
+        # for i in range(50):
+            time.sleep(30)
             yield scrapy.Request(url=urls, callback=self.parse, dont_filter=True)  # dont_filte为True,不去重
 
     def parse(self, response):
