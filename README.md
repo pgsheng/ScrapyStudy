@@ -30,6 +30,7 @@
     pip install Scrapy      # 爬虫框架
     pip install pymongo     # 数据库MongoDB操作
     pip install selenium    # 浏览驱动框架
+    pip install Pillow      # 图片
     pip install ./Twisted-18.9.0-cp36-cp36m-win_amd64.whl  # python语言写的事件驱动的网络框架
     pip install ./pywin32-224-cp36-cp36m-win_amd64.whl # Python调用win
     pip install scrapy-splash   # JS渲染服务

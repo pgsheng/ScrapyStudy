@@ -2,12 +2,10 @@
  @Author  : pgsheng
  @Time    : 2018/10/30 15:09
 """
-import time
 
 import scrapy
 
-from ScrapyStudy.items import Sina7x24Item, BeautyImageItem
-from ScrapyStudy.public import Config
+from ScrapyStudy.items import BeautyImageItem
 from ScrapyStudy.public.Log import Log
 
 
@@ -18,8 +16,9 @@ class BeautyImageSpider(scrapy.Spider):
         'http://lab.scrapyd.cn/archives/55.html'
     ]
     custom_settings = {
-        # 'ITEM_PIPELINES': {'ScrapyStudy.pipelines.Sina7x24Pipeline': 300, },
+        'ITEM_PIPELINES': {'ScrapyStudy.pipelines.BeautyImagePipeline': 300, },
         # 'DOWNLOADER_MIDDLEWARES': {"ScrapyStudy.middlewares.SeleniumMiddleware": 401, },
+        'IMAGES_STORE': 'D:\ImageSpider',  # 图片存储位置
     }
 
     def __init__(self):
@@ -35,10 +34,12 @@ class BeautyImageSpider(scrapy.Spider):
         # with open(filename, 'wb+') as file:  # 只能以二进制方式打开
         #     file.write(response.body)
 
-        items = []
         item = BeautyImageItem()
+        # image_urls = response.css(".post-content img::attr(src)").extract()  # 图片url集合
+        image_urls = response.xpath('//div[@class="post-content"]//img/@src').extract()
+        item['image_url'] = image_urls
 
-        return items  # 直接返回最后数据
+        yield item  # 直接返回最后数据
 
     def closed(self, spider):
         self.log.info("BeautyImageSpider_closed")

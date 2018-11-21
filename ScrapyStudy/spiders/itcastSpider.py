@@ -54,5 +54,5 @@ class ItcastSpider(scrapy.Spider):
 
             items.append(item)
 
-        # 直接返回最后数据
+        # 直接返回最后数据,这里可以返回单个对象或对象列表
         return items
