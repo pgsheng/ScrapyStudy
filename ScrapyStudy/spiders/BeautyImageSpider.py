@@ -37,7 +37,9 @@ class BeautyImageSpider(scrapy.Spider):
         item = BeautyImageItem()
         # image_urls = response.css(".post-content img::attr(src)").extract()  # 图片url集合
         image_urls = response.xpath('//div[@class="post-content"]//img/@src').extract()
+        title = response.css(".post-title a::text").extract_first()
         item['image_url'] = image_urls
+        item['title'] = title
 
         yield item  # 直接返回最后数据
 

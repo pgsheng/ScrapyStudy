@@ -32,3 +32,4 @@ class Sina7x24Item(scrapy.Item):
 
 class BeautyImageItem(scrapy.Item):
     image_url = scrapy.Field()
+    title = scrapy.Field()
