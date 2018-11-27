@@ -21,27 +21,37 @@ class Sina7x24SeleniumSpider(scrapy.Spider):
     custom_settings = {
         'ITEM_PIPELINES': {'ScrapyStudy.pipelines.Sina7x24Pipeline': 300, },
         'DOWNLOADER_MIDDLEWARES': {"ScrapyStudy.middlewares.SeleniumMiddleware": 401, },
-        'CONCURRENT_REQUESTS' : 1,
+        'CONCURRENT_REQUESTS': 1,
     }
 
     def __init__(self):
         self.log = Log().get_logger()
+        self.driver_firefox()
+        self.date_list = []
+        self.is_first = True
+        super(Sina7x24SeleniumSpider, self).__init__()
+
+    def driver_firefox(self):
         options = Options()  # 不同浏览器导入Options包路径不一样
         options.add_argument('-headless')  # 无界面配置
         self.driver = webdriver.Firefox(firefox_options=options)  # 这里初始化浏览很耗时
         # self.driver = webdriver.Firefox()
         # self.driver.maximize_window()
         self.driver.set_page_load_timeout(25)
-        self.date_list = []
-        self.is_first = True
-        super(Sina7x24SeleniumSpider, self).__init__()
 
     def start_requests(self):
         urls = 'http://finance.sina.com.cn/7x24/'
         while True:
-        # for i in range(50):
-            time.sleep(30)
-            yield scrapy.Request(url=urls, callback=self.parse, dont_filter=True)  # dont_filte为True,不去重
+            # for i in range(50):
+            try:
+                title = self.driver.title
+            except Exception as e:
+                self.log.info('浏览器进程被干掉，重新驱动浏览器')
+                if 'without establishing a connection' in str(e):
+                    self.driver_firefox()
+            time.sleep(25)
+            yield scrapy.Request(url=urls, callback=self.parse,
+                                 dont_filter=True)  # dont_filte为True,不去重
 
     def parse(self, response):
         # filename = Config.get_results_path() + "sina7x24.html"  # 1、保存网页数据

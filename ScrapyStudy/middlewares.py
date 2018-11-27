@@ -35,8 +35,8 @@ class SeleniumMiddleware(object):
         try:
             spider.driver.get(request.url)  # 驱动网页，很耗时
             # spider.driver.execute_script('window.scrollTo(0, document.body.scrollHeight)')
-        except TimeoutException as e:
-            log.info('加载网页超时')
+        except Exception as e:
+            log.info('驱动网页出现异常：%s' % e)
         time.sleep(2)
         return HtmlResponse(url=spider.driver.current_url, body=spider.driver.page_source,
                             encoding="utf-8", request=request)
