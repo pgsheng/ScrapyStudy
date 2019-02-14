@@ -37,7 +37,7 @@ class ItcastPipeline(object):
         self.csv_exporter = MyCsvItemExporter(fields=fields, file=self.csv_file, encoding='utf-8')
 
         """存储数据库"""
-        client = pymongo.MongoClient(host='localhost', port=27017)
+        client = pymongo.MongoClient('mongodb://admin:pgsheng123@localhost:27017/')
         db = client['scrapydb']  # 指定数据库
         self.collection = db['teachers']  # 指定集合
 
@@ -109,7 +109,7 @@ class Sina7x24Pipeline(object):
         self.exporter.start_exporting()
 
         """存储数据库"""
-        client = pymongo.MongoClient(host='localhost', port=27017)
+        client = pymongo.MongoClient('mongodb://admin:pgsheng123@localhost:27017/')
         db = client['sinadb']  # 指定数据库
         self.collection = db['7x24']  # 指定集合
 
