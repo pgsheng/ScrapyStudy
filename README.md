@@ -39,3 +39,5 @@
     docker pull scrapinghub/splash  
     docker run -p 8050:8050 scrapinghub/splash
     
+    
+    加快发展多种形式的婴幼儿照护服务，支持社会力量兴办托育服务机构，加强儿童安全保障。
